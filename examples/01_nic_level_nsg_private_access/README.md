@@ -61,13 +61,13 @@ broad inbound rules.
 -   Inbound SSH (TCP/22) is allowed **only from `AzureBastionSubnet`**
 -   All other inbound traffic is denied by default
 
-<img src="01-private-vm-networking-nic-nsg-a.png" width="900"/>
-
-*Figure 2. NIC-level Network Security Group attached directly to the VM network interface.*
-
 <img src="01-private-vm-networking-nic-nsg-b.png" width="900"/>
 
-*Figure 3. Inbound SSH rule scoped exclusively to AzureBastionSubnet.*
+*Figure 2. Inbound SSH rule scoped exclusively to AzureBastionSubnet.*
+
+<img src="01-private-vm-networking-nic-nsg-a.png" width="900"/>
+
+*Figure 3. NIC-level Network Security Group attached directly to the VM network interface.*
 
 This creates a **tight, workload-scoped security boundary**.
 
