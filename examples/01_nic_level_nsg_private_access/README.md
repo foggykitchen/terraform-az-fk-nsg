@@ -16,8 +16,9 @@ This deployment assumes that a Virtual Network already exists
 (e.g. created using the `terraform-az-fk-vnet` module in previous
 examples).
 
-The Virtual Network contains: - a **private subnet** for the workload, -
-a dedicated **AzureBastionSubnet** for secure operator access.
+The Virtual Network contains: 
+- a **private subnet** for the workload, 
+- a dedicated **AzureBastionSubnet** for secure operator access.
 
 The VM is deployed into the **private subnet** and protected by an **NSG
 attached directly to its network interface (NIC)**.
