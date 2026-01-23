@@ -13,8 +13,7 @@ networking and security policies.
 ## 🧭 Architecture Overview
 
 This deployment assumes that a Virtual Network already exists
-(e.g. created using the `terraform-az-fk-vnet` module in previous
-examples).
+(e.g. created using the `terraform-az-fk-vnet` module).
 
 The Virtual Network contains: 
 - a **private subnet** for the workload, 
