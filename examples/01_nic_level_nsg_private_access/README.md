@@ -125,8 +125,10 @@ You should see:
 ssh -i id_rsa -p 50023 azureuser@127.0.0.1
 ```
 
-Expected result: - successful SSH login, - private IP address shown
-(e.g. `10.10.1.4`), - no public exposure.
+Expected result: 
+- successful SSH login, 
+- private IP address shown (e.g. `10.10.1.4`), 
+- no public exposure.
 
 ------------------------------------------------------------------------
 
