@@ -42,16 +42,16 @@ access patterns**.
 
 ## 🎯 Why this example exists
 
-In real Azure platforms: - public IPs are **not** a default, - operator
-access must be **explicit and auditable**, - security boundaries must be
-**clearly scoped**.
+In real Azure platforms: 
+- public IPs are **not** a default, 
+- operator access must be **explicit and auditable**, 
+- security boundaries must be **clearly scoped**.
 
 This example exists to demonstrate:
 
--   the difference between **subnet-level** and **NIC-level** NSGs,
--   how to apply **workload-specific security policies**,
--   how Azure Bastion enables **secure, private VM access** without
-    exposing infrastructure to the Internet.
+-  the difference between **subnet-level** and **NIC-level** NSGs,
+-  how to apply **workload-specific security policies**,
+-  how Azure Bastion enables **secure, private VM access** without exposing infrastructure to the Internet.
 
 This example intentionally avoids: - jumpbox VMs, - public SSH access, -
 broad inbound rules.
