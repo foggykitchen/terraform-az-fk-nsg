@@ -1,0 +1,27 @@
+module "nsg" {
+  source = "../../"
+
+  name                = "${var.vm_name}-nsg"
+  location            = azurerm_resource_group.foggykitchen_rg.location
+  resource_group_name = azurerm_resource_group.foggykitchen_rg.name
+
+ rules = [
+    {
+      name                       = "allow-ssh-from-bastion-subnet"
+      priority                   = 100
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = "22"
+
+      # Bastion subnet CIDR – explicit “private access pattern”
+      source_address_prefix      = var.bastion_subnet_cidr
+      destination_address_prefix = "*"
+
+      description = "Allow SSH only from AzureBastionSubnet (private operator access)."
+    }
+  ]
+
+  tags = var.tags
+}
