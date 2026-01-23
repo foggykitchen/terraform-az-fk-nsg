@@ -53,8 +53,10 @@ This example exists to demonstrate:
 -  how to apply **workload-specific security policies**,
 -  how Azure Bastion enables **secure, private VM access** without exposing infrastructure to the Internet.
 
-This example intentionally avoids: - jumpbox VMs, - public SSH access, -
-broad inbound rules.
+This example intentionally avoids: 
+- jumpbox VMs, 
+- public SSH access, 
+- broad inbound rules.
 
 ------------------------------------------------------------------------
 
