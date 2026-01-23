@@ -26,10 +26,14 @@ attached directly to its network interface (NIC)**.
 
 *Figure 2. Architecture overview of a private VM protected by a NIC-level NSG and accessed via Azure Bastion.*
 
-This example creates: - A single **private Linux Virtual Machine** - A
-dedicated **Network Interface (NIC)** - A **NIC-level Network Security
-Group** - An **Azure Bastion Host** (Standard) - No public IP
-addresses - No Load Balancer - No autoscaling
+This example creates: 
+- A single **private Linux Virtual Machine** 
+- A dedicated **Network Interface (NIC)** 
+- A **NIC-level Network Security Group** 
+- An **Azure Bastion Host** (Standard) 
+- No public IP addresses 
+- No Load Balancer 
+- No autoscaling
 
 This is still a **foundation example**, but now focused on **secure
 access patterns**.
