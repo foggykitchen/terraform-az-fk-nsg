@@ -13,7 +13,7 @@ variable "resource_group_name" {
 variable "vnet_name" {
   description = "VNet name"
   type        = string
-  default     = "fk-vnet-with-subnets"
+  default     = "fk-vnet"
 }
 
 variable "vm_name" {
