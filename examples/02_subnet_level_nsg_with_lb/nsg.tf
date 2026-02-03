@@ -1,0 +1,43 @@
+module "private_subnet_nsg" {
+  source = "../../"
+
+  name                = "${var.vm_name}-subnet-nsg"
+  location            = azurerm_resource_group.foggykitchen_rg.location
+  resource_group_name = azurerm_resource_group.foggykitchen_rg.name
+
+  rules = [
+    {
+      name                       = "allow-http-from-azure-lb"
+      priority                   = 100
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = "80"
+      source_address_prefix      = "AzureLoadBalancer"
+      destination_address_prefix = "*"
+      description                = "Allow HTTP only from Azure Load Balancer."
+    },
+    {
+      name                       = "allow-http-from-internet"
+      priority                   = 110
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = "80"
+      source_address_prefix      = "*"
+      destination_address_prefix = "*"
+      description                = "Allow HTTP for simple web demos (disabled by default)"
+    }
+  ]
+
+  subnet_associations = {
+    private_subnet = {
+      subnet_id = module.vnet.subnet_ids["fk-subnet-private"]
+    }
+  }
+
+  tags = var.tags
+}
+

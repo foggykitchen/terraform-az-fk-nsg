@@ -63,10 +63,9 @@ DESC
 }
 
 variable "subnet_associations" {
-  description = "Optional list of subnet associations (NSG -> subnet)."
-  type = list(object({
+  description = "Optional map of subnet associations (NSG -> subnet). Keys must be stable names."
+  type = map(object({
     subnet_id = string
   }))
-  default = []
+  default = {}
 }
-
