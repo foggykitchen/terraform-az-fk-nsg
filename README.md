@@ -2,7 +2,7 @@
 
 This repository contains a reusable **Terraform / OpenTofu module** and
 progressive examples for defining and attaching **Azure Network Security Groups (NSGs)**
-to **Network Interfaces (NICs)** and **Subnets** in a clean, explicit, and
+to **Subnets** (and integrating with NIC-level attach via compute modules) in a clean, explicit, and
 architecture-aware way.
 
 It is part of the **FoggyKitchen.com training ecosystem** and is designed as
@@ -36,9 +36,7 @@ Depending on configuration and example used, the module can:
 
 - Create an **Azure Network Security Group (NSG)**
 - Define **inbound and outbound security rules**
-- Attach NSGs to:
-  - **Network Interfaces (NIC-level security)**
-  - **Subnets (tier-level security)**
+- Attach NSGs to **Subnets (tier-level security)**
 - Support multiple rule definitions with priorities and source scoping
 - Cleanly separate **security policy** from compute and networking resources
 
@@ -67,7 +65,6 @@ terraform-az-fk-nsg/
 ├── main.tf
 ├── inputs.tf
 ├── outputs.tf
-├── versions.tf
 ├── LICENSE
 └── README.md
 ```
@@ -101,17 +98,25 @@ module "vm_nsg" {
     }
   ]
 
-  nic_associations = {
-    vm1 = {
-      nic_id = azurerm_network_interface.vm_nic.id
-    }
-  }
-
   tags = {
     project = "foggykitchen"
     env     = "dev"
   }
 }
+
+# NIC-level attach is configured via compute module.
+
+module "compute" { 
+  source = "github.com/mlinxfeld/terraform-az-fk-compute"
+
+  (...)
+
+  attach_nsg_to_nic = true
+  nsg_id            = module.vm_nsg.id
+
+  (...)
+}
+
 ```
 
 ### Subnet-level NSG (tier-scoped)
@@ -158,10 +163,10 @@ module "private_subnet_nsg" {
 
 | Output | Description |
 |--------|-------------|
-| `nsg_id` | ID of the created Network Security Group |
-| `nsg_name` | Name of the NSG |
-| `nic_associations` | NIC associations created by the module |
-| `subnet_associations` | Subnet associations created by the module |
+| `id` | ID of the created Network Security Group |
+| `name` | Name of the NSG |
+| `resource_group_name` | Resource group name where NSG was created |
+| `subnet_association_ids` | IDs of subnet-NSG association resources (if any) |
 
 ---
 
