@@ -65,6 +65,7 @@ terraform-az-fk-nsg/
 ├── main.tf
 ├── inputs.tf
 ├── outputs.tf
+├── versions.tf
 ├── LICENSE
 └── README.md
 ```
