@@ -10,7 +10,7 @@ and then at the **subnet level** (tier‑scoped security) in combination with **
 These examples deliberately focus on **network security fundamentals** and avoid
 enterprise landing zones, policy frameworks, or platform shortcuts.
 
-They are part of the **FoggyKitchen.com training ecosystem** and are used across:
+They are part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses-2/)** and are used across:
 
 - Azure Fundamentals with Terraform / OpenTofu  
 - Azure Networking & Security foundations  
@@ -110,4 +110,3 @@ See `LICENSE` for details.
 ---
 
 © 2026 FoggyKitchen.com — Cloud. Code. Clarity.
-
