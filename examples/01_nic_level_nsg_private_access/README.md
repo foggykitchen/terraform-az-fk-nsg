@@ -12,8 +12,8 @@ networking and security policies.
 
 ## 🧭 Architecture Overview
 
-This deployment assumes that a Virtual Network already exists
-(e.g. created using the `terraform-az-fk-vnet` module).
+This deployment creates a Virtual Network using the
+`terraform-az-fk-vnet` module.
 
 The Virtual Network contains: 
 - a **private subnet** for the workload, 
@@ -27,11 +27,12 @@ attached directly to its network interface (NIC)**.
 *Figure 2. Architecture overview of a private VM protected by a NIC-level NSG and accessed via Azure Bastion.*
 
 This example creates: 
-- A single **private Linux Virtual Machine** 
-- A dedicated **Network Interface (NIC)** 
-- A **NIC-level Network Security Group** 
-- An **Azure Bastion Host** (Standard) 
-- No public IP addresses 
+- A **Virtual Network** and **subnets** via `terraform-az-fk-vnet`
+- A single **private Linux Virtual Machine** via `terraform-az-fk-compute` 
+- A dedicated **Network Interface (NIC)** via `terraform-az-fk-compute` 
+- A **NIC-level Network Security Group** via `terraform-az-fk-nsg` 
+- An **Azure Bastion Host** (Standard) via `terraform-az-fk-bastion` 
+- No public IP addresses on VMs 
 - No Load Balancer 
 - No autoscaling
 

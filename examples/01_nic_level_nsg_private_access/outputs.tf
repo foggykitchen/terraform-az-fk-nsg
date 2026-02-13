@@ -1,5 +1,5 @@
 output "bastion_name" {
-  value       = azurerm_bastion_host.this.name
+  value       = module.bastion.bastion_name
   description = "Azure Bastion host name."
 }
 
