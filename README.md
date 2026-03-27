@@ -5,7 +5,7 @@ progressive examples for defining and attaching **Azure Network Security Groups 
 to **Subnets** (and integrating with NIC-level attach via compute modules) in a clean, explicit, and
 architecture-aware way.
 
-It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses-2/)** and is designed as a dedicated **network security boundary layer** for Azure workloads.
+It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** and is designed as a dedicated **network security boundary layer** for Azure workloads.
 
 ---
 
