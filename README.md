@@ -77,7 +77,7 @@ terraform-az-fk-nsg/
 
 ```hcl
 module "vm_nsg" {
-  source = "git::https://github.com/foggykitchen/terraform-az-fk-nsg.git?ref=v1.0.0"
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-nsg.git?ref=v1.0.0"
 
   name                = "fk-private-vm-nsg"
   location            = "westeurope"
@@ -107,7 +107,7 @@ module "vm_nsg" {
 # NIC-level attach is configured via compute module.
 
 module "compute" { 
-  source = "github.com/foggykitchen/terraform-az-fk-compute"
+  source = "github.com/mlinxfeld/terraform-az-fk-compute"
 
   (...)
 
@@ -123,7 +123,7 @@ module "compute" {
 
 ```hcl
 module "private_subnet_nsg" {
-  source = "git::https://github.com/foggykitchen/terraform-az-fk-nsg.git?ref=v1.0.0"
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-nsg.git?ref=v1.0.0"
 
   name                = "fk-backend-subnet-nsg"
   location            = "westeurope"
@@ -187,12 +187,12 @@ behind “magic” defaults.
 ## 🧩 Related Modules & Training
 
 - [terraform-az-fk-vnet](https://github.com/foggykitchen/terraform-az-fk-vnet)  
-- [terraform-az-fk-compute](https://github.com/foggykitchen/terraform-az-fk-compute)  
-- [terraform-az-fk-loadbalancer](https://github.com/foggykitchen/terraform-az-fk-loadbalancer)  
-- [terraform-az-fk-bastion](https://github.com/foggykitchen/terraform-az-fk-bastion)  
-- [terraform-az-fk-disk](https://github.com/foggykitchen/terraform-az-fk-disk)  
-- [terraform-az-fk-storage](https://github.com/foggykitchen/terraform-az-fk-storage)  
-- [terraform-az-fk-aks](https://github.com/foggykitchen/terraform-az-fk-aks)  
+- [terraform-az-fk-compute](https://github.com/mlinxfeld/terraform-az-fk-compute)  
+- [terraform-az-fk-loadbalancer](https://github.com/mlinxfeld/terraform-az-fk-loadbalancer)  
+- [terraform-az-fk-bastion](https://github.com/mlinxfeld/terraform-az-fk-bastion)  
+- [terraform-az-fk-disk](https://github.com/mlinxfeld/terraform-az-fk-disk)  
+- [terraform-az-fk-storage](https://github.com/mlinxfeld/terraform-az-fk-storage)  
+- [terraform-az-fk-aks](https://github.com/mlinxfeld/terraform-az-fk-aks)  
 
 ---
 

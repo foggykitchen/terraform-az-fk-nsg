@@ -94,12 +94,12 @@ The goal is **clarity and correctness**, not completeness.
 
 ## 🔗 Related Modules & Training
 
-- [terraform-az-fk-nsg](https://github.com/foggykitchen/terraform-az-fk-nsg) (this repository)  
+- [terraform-az-fk-nsg](https://github.com/mlinxfeld/terraform-az-fk-nsg) (this repository)  
 - [terraform-az-fk-vnet](https://github.com/foggykitchen/terraform-az-fk-vnet)  
-- [terraform-az-fk-compute](https://github.com/foggykitchen/terraform-az-fk-compute)  
-- [terraform-az-fk-loadbalancer](https://github.com/foggykitchen/terraform-az-fk-loadbalancer)  
-- [terraform-az-fk-bastion](https://github.com/foggykitchen/terraform-az-fk-bastion)  
-- [terraform-az-fk-aks](https://github.com/foggykitchen/terraform-az-fk-aks)  
+- [terraform-az-fk-compute](https://github.com/mlinxfeld/terraform-az-fk-compute)  
+- [terraform-az-fk-loadbalancer](https://github.com/mlinxfeld/terraform-az-fk-loadbalancer)  
+- [terraform-az-fk-bastion](https://github.com/mlinxfeld/terraform-az-fk-bastion)  
+- [terraform-az-fk-aks](https://github.com/mlinxfeld/terraform-az-fk-aks)  
 
 ---
 
